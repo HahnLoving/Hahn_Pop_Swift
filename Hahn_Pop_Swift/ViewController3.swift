@@ -15,6 +15,10 @@ class ViewController3: UIViewController {
         self.view.backgroundColor = UIColor.blue
         
         // MARK:-删除栈里面指定push过的控制器
+        /**
+        通过循环找到指定控制器删除
+        @param ViewController1 返回的指定控制器
+        */
         for vc in (self.navigationController?.viewControllers)! {
             if vc.isKind(of: ViewController1.self) {
                 vc.removeFromParent()

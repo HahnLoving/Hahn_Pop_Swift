@@ -36,6 +36,12 @@ class ViewController4: UIViewController {
     
     // MARK: - 返回按钮
     @objc func backBtnCkick(){
+        
+        /**
+        通过循环找到指定控制器返回
+        @param MainViewController 返回的指定控制器
+        */
+        
         for vc in (self.navigationController?.viewControllers)! {
             if vc.isKind(of: MainViewController.self) {
                 self.navigationController?.popToViewController(vc, animated: true)
